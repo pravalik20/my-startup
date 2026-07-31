@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #070313;
+  color: #ffffff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Links */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Buttons */
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070313;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* Text Selection */
+
+::selection {
+  background: #8b5cf6;
+  color: white;
+}
+
+/* Glass Effect */
+
+.glass {
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* Gradient Text */
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #d946ef,
+    #22d3ee
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Background Grid */
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+}
+
+/* Floating Animation */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: floating 4s ease-in-out infinite;
+}
+
+/* Glow Animation */
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px rgba(139,92,246,.25);
+  }
+
+  50% {
+    box-shadow: 0 0 60px rgba(139,92,246,.55);
+  }
+
+  100% {
+    box-shadow: 0 0 20px rgba(139,92,246,.25);
+  }
+}
+
+.glow {
+  animation: glow 4s infinite;
+}
+
+/* Card Hover */
+
+.card-hover {
+  transition: 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+}
+
+/* Responsive */
+
+@media (max-width:1024px){
+
+.hero-title{
+font-size:56px;
+}
+
+}
+
+@media (max-width:768px){
+
+.hero-title{
+font-size:42px;
+line-height:1.1;
+}
+
+.hero-description{
+font-size:16px;
+}
+
+}
+
+@media (max-width:480px){
+
+.hero-title{
+font-size:34px;
+}
+
+.hero-description{
+font-size:15px;
+}
+
+}
