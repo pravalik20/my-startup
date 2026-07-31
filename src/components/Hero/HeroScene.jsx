@@ -315,13 +315,13 @@ className="
 relative
 z-30
 
-mt-[40px]
+mt-[50px]
 
 sm:mt-[80px]
 
 md:mt-[120px]
 
-scale-[0.55]
+scale-[0.99]
 
 sm:scale-90
 
